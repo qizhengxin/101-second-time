@@ -1,0 +1,10 @@
+<%= simple_form_for @group do |f| %>
+
+<div class="form-group">
+  <%= f.input :title, label: false, input_html: { class: "form-control"}, placeholder: '填写主群名字'  %>
+  <%= f.input :description, label: false, placeholder: "请做简单描述"%>
+</div>
+
+<%= f.submit "提交", class: "btn btn-primary", data: { disable_with: "稍等.."} %>
+
+<% end %>
