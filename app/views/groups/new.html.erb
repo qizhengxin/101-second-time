@@ -1,0 +1,14 @@
+<div class="col-md-4">
+  <h2>新增组群</h2>
+
+  <hr>
+
+  <%= simple_form_for @group do |f| %>
+
+  <%= f.input :title %>
+  <br>
+  <%= f.input :description %>
+  <br>
+  <%= f.submit "提交", class: "btn btn-primary", data: { disable_with: "稍等.." } %>
+  <% end %>
+</div>
