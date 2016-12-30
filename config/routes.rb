@@ -8,5 +8,9 @@ Rails.application.routes.draw do
     end
     resources :articles
   end
+
+  namespace :account do
+    resources :groups
+  end
   root 'groups#index'
 end
