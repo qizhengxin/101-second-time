@@ -9,6 +9,7 @@
         <th>主群编号</th>
         <th>组名</th>
         <th>组名描述</th>
+        <th>群主</th>
       </tr>
     </thead>
 
@@ -18,6 +19,7 @@
         <td><%= group.id %></td>
         <td><%= link_to(group.title, group_path(group)) %></td>
         <td><%= group.description %></td>
+        <td><%= group.user.email %></td>
         <td><%= link_to("编辑", edit_group_path(group), class: "btn btn-sm btn-default") %>
             <%= link_to("删除", group_path(group), class: "btn btn-sm btn-default",
                  method: :delete, data: {confirm: "你确定吗?"}) %>
