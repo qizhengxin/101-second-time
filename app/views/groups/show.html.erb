@@ -13,9 +13,6 @@
 
     <% if current_user && current_user.is_member_of?(@group) %>
     <%= link_to("发表文章", new_group_article_path(@group), class: "btn btn-danger pull-right") %>
-    <% end %>
-
-    <% if current_user && current_user == @group.user %>
     <%= link_to("修改", edit_group_path(@group), class: "btn btn-primary pull-right") %>
     <% end %>
   </div>

@@ -1,0 +1,26 @@
+<div class="col-md-12">
+  <h2 class="text-center">我发表的文章</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>内容</th>
+        <th>组名</th>
+        <th>更新时间</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @articles.each do |g| %>
+        <tr>
+          <td><%= g.content %></td>
+          <td><%= g.group.title %></td>
+          <td><%= g.updated_at %></td>
+          <td><%= link_to('编辑', edit_account_article_path(g), class: "btn btn-primary") %></td>
+          <td><%= link_to('删除', account_article_path(g), method: :delete, data:{confirm: "要死呀"}, class: "btn btn-primary") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
